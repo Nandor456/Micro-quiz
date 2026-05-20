@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 10 uC ADC",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "A szenzorok a környezetben mért jeleket átalakítják egy",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "elektromos áramértékké"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "elektromos feszülstégértékké"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A digitális jel abban jobb az analóg jelnél,",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogy nem nagyon érzékeny a jelre tevődő zajra"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogy pontosabban tudja reprezentálni a mért mennyiség minden lehetséges értékét"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A legtöbb létező szenzor:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "analóg jelet hoz létre amelyet át kell alakítsunk digitális jellé"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "eleve digitális jelet hoz létre, úgy mint a digitális kamera"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Ha egy 3.3V-os jelet 10 biten alakítok át akkor a felbontásom:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precknision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "3.3V / 10"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "3.3V / 1023"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Milyen eventek lehetségesek az ADC hardware komponens használata esetén (Arduino Uno):",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "ADC Conversion Complete"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "ADC Data Receive Complete,ADC Data Register Empty"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az anti-aliasing szűrő:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "kiszűri a nagyon lassan változó komponenseket"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "kiszűri a nagyon gyorsan változó komponenseket"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A mintavételezés tétele szerint:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A jelet legalább fele olyan gyorsan kell mintavételezni mint a jelben levő leggyorsabb komponens"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A jelet legalább kétszer olyan gyorsan kell mintavételezni mint a jelben levő leggyorsabb komponens"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Miért van beépítve egy multiplexer az analóg-digitális átalakítóba?",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Azért hogy a bemenő analóg jelet felerősítse"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Azért hogy több lehetséges bemenetről is ki lehessen választani az átalakítani kívánt jelet"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Milyen felbontás elegendő egy jó hangminőséghez:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "16 bites felbontás "
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "8 bites felbontás"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Milyen mintavételezési sebességet használnak általában hangfelvételhez",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "15000 minta másodpercenként"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "44100 minta másodpercenként"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy Arduino UNO esetén hogyha meghívjuk az analogWrite() függvényt:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "akkor nem igazi analóg jelet ad hanem egy PWM jelet az adott duty cycle-vel"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy nalóg jelet generál a beírt szám / 255 x 5V feszültségértéken"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A Successive Approximation ADC abban jobb a Digital Ramp-nél",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogy felülről közelíti meg az analóg jelet nem lentről számol felfele"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogy minden bitet egyszer próbál meg csak álltani, ezért sokkal gyorsabb"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az ADMUX regiszterben",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "tudjuk beállítani azt, hogy milyen prescalerrel ossza az órajelet az ADC alegység"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "tudjuk beállítani azt, hogy melyik bemenetről vegyük az analóg jelet"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az ADC átalakítást lehet triggerelni a következő eseményekkel:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Timer események, Analóg összehasonlítása két jelnek, External interrupt, az előző átalakítás befejezése"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Csak kódból lehet meghívni a következő átalakítás kezdetét"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

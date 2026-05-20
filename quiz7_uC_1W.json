@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 7 uC 1W",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy 1W parazita egység:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "csak egyetlen egy szálon kötődik össze a Master egységgel"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "táplálása is az 1W vonalból jön, innen tölt fel egy belső kondenzátort"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy parazita 1W hőmérőt nem lehet pollingozni a következő műveleteknél:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Hőmérséklet mérés, beállítások kimentése az EEPROM-ba"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "beállítások kiolvasása az EEPROM-ból"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy parazita 1W egység VDD bemenetét:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a GNDre kell kötni"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "nem kell bekötni sehova"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A 1W vonal IDLE állapota:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precknision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "logical 0 mert a kommunikáció mindig egy logical 1-essel kezdődik"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "logical 1 mert ez a HIGH ami táplálni tudja a parazita kapacitásokat"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A 1W protokollban a hibaellenőrzés:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "az adatokat kétszer küldi el egyszer normálisan és egyszer tagadva"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a cyclic redundancy check ami egy kilenced fokú Galois polinomra épül"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A RESET pulzus után:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egymás után válaszolnak a slave egységek meg lehet számolni hány van a vonalon"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "minden jelenlevő slave egység válaszol, lehet látni ha legalább egy van a vonalon"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az 1W kommunikációban:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A Master tud pontosan időzíteni ő adja a time slotokat és pontosabb a sampling time-ja is"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A slave egységek tudnak pontosabban időzíteni erre szükség is van mert nincs közös órajel"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Amikor nem tudjuk a vonalon levő 1W címeket",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "lehet egy gyors brute force keresésünk ahol felsoroljuk az összes lehetséges címet"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "kiadhatunk egy Search ROM parancsot ami bináris fa keresést végez a jelenlevő címek között"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A Search ROM parancsban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "64 x 3 time slot van amiből 64 x 2 Read Slot és 64 Write slot"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "64 x 3 time slot van amiből 64 x 2 Write Slot és 64 Read slot"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az egy szálon történő kommunikáció előnye:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A nagyon nagy sebesség amivel ezen az egy szálon tudjuk küldeni az adatokat"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Az hogy kevés kontakt pont illetve kevés kábelezéssel meg lehet valósítani az összeköttetést"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az UID azaz a minden 1W egységbe beégetett azonosító",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "8 bites family code + 48 bit egyedi azonosító + 8 bit CRCből áll"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "16 bites family code + 40 bit egyedi azonosító + 8 bit CRCből áll"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A 1W kommunikáció:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "szimmetrikus és aszinkron"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "aszimmetrius és aszinkron"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy 1W kommunikáció esetén",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Ha már egyszer megcímeztem egy slave egységet nem kell az első két lépést megismételni"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "mindig meg kell ismételni mind a 3 lépését a kommunikációnak: RESET - ROM - RAM"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A 1W kommunikációban a 0 és az 1 et a következő jelenti:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Lehúzza a data vonalat a master és a master vagy a slave hamar (1) vagy később (0) engedi azt vissza fel"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Felemeli a data vonalat a master és a master vagy a slave hamar (0) vagy később (1) engedi azt vissza le"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

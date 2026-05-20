@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 3 uC GPIO",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "A PinMode(LEDPIN, OUTPUT) helyett írhattam volna azt is, hogy",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "PinMode(13, 0)"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "PinMode(13, 1)"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A DDRn regiszertben tudom állítani azt hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Milyen irányba akarom használni a PINt 1 Output 0 Input "
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Mit tegyen ki az illető pinre, 1est vagy 0st"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A PORTD0 és PORTD1 es pinek:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Használhatók GPIO pinként ha erre akarjuk használni őket"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Nem használhatók GPIO pinként mert más funkciójuk van a soros kommunikációban"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Hogyha egy GPIO Pint összekötök a GNDvel egy kábelen és egy kapcsolón keresztül",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Akkor ha INPUTra állítottam 1est olvasok ha nincs lenyomva és 0st ha le van nyomva a kapcsoló"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Akkor ha INPUTra állítottam nincs meghatározott értéke a PINnek amíg le nem nyomják a kapcsolót"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az Arduino UNOban csak 4 fajta változást lehet követni a PIN állapotában:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "HIGH, LOW, RISING és FALLING átmeneteket"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "LOW, RISING, FALLING és CHANGE átmeneteket"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Ennek a függvénynek a paramétere hogy ISR(INT0_vect) azt adja meg:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogy melyik függvényre kell ugorjon az interrupt"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogy meyik interrupt esetén hívódjon meg ez a függvény"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Ahelyett, hogy PinMode(2,INPUT)",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "írhatnám azt is hogy DDRB &= 0b11101111"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "írhatnám azt is hogy DDRB |= 0b11101111"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A kimeneti és a bemeneti specifikációk közül:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A bemeneti specifikációk szigorúbbak, hogy a jelek mindig helyesen legyenek definiálva"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A kimeneti specifikációk szigorúbbak hogy még zaj esetén is majd értelmezhető legyen a jel egy bemeneten"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "attachInterrupt(pin, ISR, mode) függvényben",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "az ISR adja meg a függvényt ahova az interruptnak ugrania kell"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "a pin adja meg azt a pint amelyen nézi a külső interruptot és Arduino esetén ez bármelyik digitális pin lehet"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Mi az összefüggés a flag és az interrupt között:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Az interrupt lefutása után beállítódik a flag hogy jelezze az eseményt"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a flag beállítódik hogy jelezze az eseményt és ez meghívhat egy interruptot"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az Interrupt Sense Control Bitek beállítják azt hogy ",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Milyen típusú válzotásra legyen érzékeny az illető pin (LOW, CHANGE, RISING, FALLING)"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Milyen Pin legyen érzékeny az adott változásra"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A PCIFR flag regiszterben található PCIF flagek",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "beállítódnak az interrupt meghívása után 1-re és a usernek kell letörölni majd őket software-ből"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "beállítódnak az esemény bekövetkeztekor 1-re és hogyha meghívtak egy interruptot akkor az interrupt nullázza őket"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy flag akkor hív meg egy interruptot:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogyha ahhoz az eseményhez van interrupt rendelve akkor mindig meghívja, kivéve ha kikapcsoljuk ezt"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogyha ahhoz az eseményhez van interrupt rendelve, az interruptok be vannak kapcsolva és az IE bit is be van kapcsolva"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Így tudok kitenni egy logikai 1est egy GPIO PINre amit OUTPUTnak állítottam be:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "PORTB |= _BV(PORTB4);"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "PINB &= ~_BV(PORTB4);"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

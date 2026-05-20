@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 6 uC UART",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "Mit jelent az, hogy a távirányítóban az IR jel modulálva van 38kHz-n?",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Ennyi az IR jel frekvenciája, 38kHz"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Ilyen frekvenciával kapcsolják ki és be az IR jelet aminek a frekvenciája 300GHz-400THz"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Miért modulálják az IR jelet amit távirányítókban használnak?",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogy meg lehessen különböztetni a környezetbeli IR jelektől"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogy reá tegyék az információt frekvenciamodulálással"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Hogyan különbözik a 0 és az 1 az IR kommunikációban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a sötét és világos intervallumok hosszában"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "az IR jel frekvenciájában ami lehet magasabb vagy alacsonyabb"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy DHT11es szenzorral a kommunikáció úgy kezdődik, hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precknision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A DATA vonal felmegy 0-ról 1-re és ott marad egy hosszabb ideig (RESET)"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A DATA vonal lemegy 1-ről 0-ra és ott marad egy hosszabb ideig (RESET)"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A DHT11-el való kommunikációban:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "két szál van az egyiken az arduino adja ki a RESET jelet a másikon a DHT11 adja vissza a választ"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "egy szál van ugyanazon a szálon adja az arduino a RESET jelet és a DHT11 a választ"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A DHT11es kommunikációban a hibaellenőrzés:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy paritásbit"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "egy byte ami a négy elküldött byte összege"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A hardware handshake:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "gyorsabb mert dedikált külön szálakon megy"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egyszerűbb mert kevesebb összeköttetést igényel"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A software handshake",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "gyorsabb mert nem kell szinkronizálni a különböző szálakat"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "egyszerűbb mert kevesebb összeköttetést igényel"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az UART protokollban a hibaellenőrzés",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "egy paritásbit"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy byte ami a négy elküldött byte összege"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A NEC IR protokollban a hibaellenőrzés",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy paritásbit"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "az összes bit megismétlése, tagadva"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Honnan tudja a Smart RGB LED hogy melyik 24 bites csomag az övé a sorból",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "az első 24 bit amit egy reset után kap, ezt nem is küldi tovább"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "a csomag az RGB LED sorszámával kezdődik utána jön a 24 bit"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Mi a különbség a szinkron és az aszinkron protokollok között",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "az aszinkron protokollok általában gyorsabbak"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a szinkron protokollokban van közös órajel külön dedikált vonalon"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Milyen hiba jelzések vannak a soros protokollban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Data Register Empty, Receive Complete és Transfer Complete"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Frame Error, Data Overrun és Partity Error"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Milyen események és interruptok vannak a soros protokollban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Data Register Empty, Receive Complete és Transfer Complete"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Frame Error, Data Overrun és Partity Error"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

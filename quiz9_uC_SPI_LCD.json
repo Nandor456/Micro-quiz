@@ -1,0 +1,452 @@
+{
+    "title": "Quiz 9 uC SPI",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "Az SPI kommunikáció",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "szimmetrikus"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "szinkron"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Mitől lesz egy kommunikáció aszimmetrikus?",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Van egy Master vagy Coordinator egység"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "attól hogy a két fél két különböző feladatot végez"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "SPI kommunikációban a vonalak IDLE állapota:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Nincs meghatározva, ezért kell tudjon minden egység lekapcsolni róla"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Az IDLE az mindig HIGH mint a 1W vagy TWI kommunikációnál volt"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Milyen irányba megy a jel a MOSI vonalon",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precknision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A Slave-től a Master fele"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A Master-től a Slave fele"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "SPI protokollban a SETUP és a SAMPLE különválasztása:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "SETUP az SCL rising edgen és SAMPLE az SCL falling edgen van vagy fordítva"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "SETUP az SCL==LOW és SAMPLE az SCL==HIGH esetén van"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy START vagy egy STOP jel abban különbözik az adatbittől:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogy az IDLE után ez az első elküldött adatbit illetve a csomag végén az utolsó"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "az SPI kommunikációban nincs START és STOP bit"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy SPI adatcsomagban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "START, 8 bit adat, hibaellenőrzés és STOP van"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "tetszőleges számú bit van tetszőleges jelentéstartalommal"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "az SPI hibaellenőrzése:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy paritás bit amit a 8 adatbitből számolnak, lehet even vagy odd"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "nincs beépített hibaellenőrzés, a full duplex küldést lehet annak használni"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az SPI kommunikáció sebessége:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Ez tetszőleges sebesség lehet csak bírja a Slave egység is"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "limitált 400 kHz-re mert van egy spike filter ami e felett leszűri"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az esemányek amik lehetségesek SPI kommunikáció esetén:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Receive Complete, Transmit Complete"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Serial Transfer Complete"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy TWI kommunikáció",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "kevesebb szálon van megvalósítva mint az SPI és van hibaellenőrzés benne"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "gyorsabb és flexibilisebb mint az SPI kommunikáció"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az SPICR kontroll regiszterben",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "található egy SPIWC write collision hibaellenőrző bit"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "be lehet állítani a data ordert DORD és a clock phase és polarity-t"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy SPI Slave egység úgy tud szólni a Masternek hogy túl gyors a kommunikáció:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Hogy az SCLK jelet lehúzza és lehúzva tartja (clock stretching)"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "nem tud szólni, az SPI protokollban a Slave nem tud semmivel visszafele kommunikálni a Masternek erről"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az SPIben a SS vagy CS vonalból:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "annyi van ahány slave egység van a vonalon, kivéve ha daisy chain bekötést használunk"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy vonal van ezen küldi el a Master a Slave címét"
+                        }
+                    ]
+                },
+                 {
+                    "question_name": "Question",
+                    "question_text": "Az LCD kijelzőt meghajtó Hitachi HD 44780U chip",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "leegyszerűsíti az interfacet egy 12 pines eszközről egy 4 pines, TWI (I2C) interface-ra"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "lehetségessé teszi a sok különálló pixel bekötése helyett azt hogy csak megadjuk melyik karaktert szeretnénk megjeleníteni"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az LCD kijelzőn levő I2C bakcpack:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "lehetségessé teszi a sok különálló pixel bekötése helyett azt hogy csak megadjuk melyik karaktert szeretnénk megjeleníteni"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "leegyszerűsíti az interfacet egy 12 pines eszközről egy 4 pines, TWI (I2C) interface-ra"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A folyadékkristályban:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Gömb alakú molekulák vannak amelyek helyileg kristályszerkezetbe rendeződnek"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Hosszúkós molekulák vannak amelyek nemcsak a pozició hanem az irányuk szerint is be tudnak rendeződni"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A folyadékkristály képes a polarizált fény polarizációs síkját:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "elforgatni, akkor ha a molekulái egy spirális elredezésben vannak (királis nematikus rendben)"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "elforgatni, akkor ha a molekulái ugyanabba az irányba állnak be (nematikus rend)"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A Hitachi LCD chip képes 8 adatbit helyett 4 adatbiten is kommunikálni, ilyenkor:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "minden utasítás és adat csak 4 bit hosszúságú lehet"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a 8 bites adat vagy utasítás időben egymás után két 4 bites csomagban megy át"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az LCD HItachi chipben a CGROM:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Aazt tárolja, hogy milyen ASCII kódhoz milyen 5x8as pixel forma tartozik"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "a karakterek ASCII kódját tárolja, ez lehet európai vagy japán ASCII kód is"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az LCD HItachi chipben a CGRAM:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Azt tárolja, hogy milyen ASCII kódhoz milyen 5x8as pixel forma tartozik"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A felhasználó által definiált 5x8 pixeles mintákat tárolja"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az LCD HItachi chipben a DDRAM:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Azt tárolja, hogy milyen ASCII kódhoz milyen 5x8as pixel forma tartozik"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a megjelenítendő karakterek ASCII kódját tárolja a megfelelő helyen (sor, oszlop) a memóriában"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A CGRAM címben azért van 3 bit arra hogy melyik karakert definiáljuk:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "mert egy arra van kihagyva hogy ez CGRAM címzés és 4 arra hogy megadja hogy melyik sort definiáljuk"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "mert a másik 5 bit megadja hogy melyik pixel legyen bekapcsolva és melyik ne legyen bekapcsolva"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

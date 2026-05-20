@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 2 uC",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "A real time működéshez az szükséges, hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A processzor minél gyorsabb legyen hogy hamar eljusson a task-hez"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Csak az illető task fusson és rövid utasítások legyenek csak lehetségesek"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A mikrokontroller a változókat ebben a memóriában tárolja:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "SRAM, gyors, de kikapcsoláskor elvesztődik"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Flash, megmarad a kikapcsolás után is"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A mikrokontroller a programot ebben a memóriában tárolja:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Flash, megmarad a kikapcsolás után is"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "RAM, újra kell tölteni a programokat bootoláskor"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az Arduino konceptje az hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Minden lehetséges periféria amire a diáknak szüksége lehet, be legyen építve a board-ba"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Semmilyen periféria ne legyen a boardon, de modulárisan lehessen csatlakoztatni shield-eket"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy autóban egy air baget kezelő mikrokontroller esetén fontos:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A költség, különösen a processzor költsége és a kód fejlesztési idő költsége"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A real time működés és a lehetséges hibák kiküszöbölése"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az általános célú számítógépek és a mikrokontrollerek",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egymás után lettek kifejlesztve, a mikrokontrollerek csak sokkal később, az IoT elterjedésével"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "körülbelül egy időben lettek kifejlesztve, az Intel 4004as és 4048as chippekkel"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Hogyha használok boot loadert a mikrokontrolleren, akkor",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "ez elvesz a programom rendelkezésére álló flash tárhelyből"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "ez beindítja majd a mikrokontrollerre felírt kódot minden alkalommal amikor az bekapcsol"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Melyikből gyártanak sokkal többet évente:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Általános célú processzorból"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Mikrokontrollerből"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A mikrokontroller utasításkészlete:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "RISC, hogy egy uatsítás se tartson sokat és segítse ezzel a real time működést"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "CISC, hogy a komplex feladatokat is el tudja végezni"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy távirányítóba épített mikrokontroller esetén:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "fontos az hogy csatlakozzon az internetre és updatelhető legyen a software-je"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "fontos az hogy nagyon kevés áramot fogyasszon akkor amikor nem használják"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A GPIO pinek nevének a rövidítése:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "General Purpose Input and Output"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Generic Pin for In and Out operations"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A predictable latency azt jelenti, hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "már előre tudjuk azt hogy el fog késni a műveletvégzés és nem lesz real time"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "tudjuk azt hogy maximum mennyit késhet a következő művelet elvégzése"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A modern számítógépek Neumann architektúrájúak, ugyanott tárolják a kódot és a változókat is",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "a mikrokontrollerek is ilyen Neumann architektúrával épülnek"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a mikrokontrollerek ezzel szemben Harvard architektúrával épülnek, a kód és változók külön helyen vannak tárolva "
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A kurzusban megemlített két mikrokontroller gyártó, az ARM és az Atmel:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "kicsit más szegmenseket fednek le, az Atmel egyszerűbb chipeket gyárt mint ami éldául az Arduino UNOban is van"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "nagyon hasonló mikrokontrollereket gyártanak, például az Arduino UNOban is ARM chip van"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

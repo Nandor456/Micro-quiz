@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 5 uC Timerek 2",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy aktív buzzerre:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A hangjelet kell tenni ami a megfelelő frekvenciával kapcsol ki és be"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Csak feszültséget kell tenni és egy előre beállított hangon szólal meg"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy passzív buzzerre:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A hangjelet kell tenni ami a megfelelő frekvenciával kapcsol ki és be"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Csak feszültséget kell tenni és egy előre beállított hangon szólal meg"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Normal üzemmódban:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A MAX érték az 0xFF vagy 0xFFFF itt lenulláz és kezdi előlről"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A MAX érték az be van állítva az OCR regiszterben, amikor ezt eléri, lenulláz és kezdi előlről"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "CTC üzemmódban:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A MAX érték az 0xFF vagy 0xFFFF itt lenulláz és kezdi előlről"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A MAX érték az be van állítva az OCR regiszterben, amikor ezt eléri, lenulláz és kezdi előlről"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy egy byte-os timer esetén a három esemény ami flag-et állít be és kiválthat interruptot:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A TCNT értéke elérte a 0xFF, OxFFFF vagy az OCR értékét"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A TCNT értéke elérte a 0xFF, OCRA vagy az OCRB értékét"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Ha nem akarjuk blokkolni a main loopot egy időzítéssel, akkor:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Pollingot kell használni"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Interruptot kell használni"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Szeretnék 50 lépcsőnként egy interruptot Normal üzemmódban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "minden interruptban TCNT0 = 255 - 50"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "íminden interruptban TCNT0 = 50"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Szeretnék 50 lépcsőnként egy interruptot CTC üzemmódban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "minden interruptban OCRA0 = 255 - 50"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "OCRA0 = 50, a számolás elején, egyszer"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Szeretném azt a hangot generálni hogy C6, ami 1046.5 Hz-en van",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "16 MHz / 1046.5 Hz / prescaler / 2 lépcsőnként kell váltani"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "16 MHz / 1046.5 Hz / prescaler * 2 lépcsőnként kell váltani"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Szeretném a D3 hangot generálni ami 146.83 Hz-en van",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "A kimenet 146.83 Hz / 2 frekvencián kell toggle-oljon"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "A kimenet 146.83 Hz * 2 frekvencián kell toggle-oljon"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Szeretnék egy adott sebességgel számolni a maxiumig, de mindig más számnál legyen egy interruptom",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Ez lehetséges, Normal üzemmódban, felhasználva az OCR interruptokat"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Ez nem lehetséges, mivel az OVF interrupt mindig csak a max értéknél van"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A COM0A0 és COM0A1 bitek (Compare Outout Mode for Channel A) azt állítják be hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "melyik kimeneten geneálódjon a hang a CTC üzemmódban (PD4,PD5,PD6 vagy PD7)"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "mi történjen az OC0A kimenettel amikor TCNT0 == OCR0A: disconnected, toggle, set vagy clear"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Az ultrahangos távolságmérés és a radar:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Különböző megnevezései ugyanannak a mérési technikának, ugyanazzal a hullámmal mérnek csak levegőben vagy vízben"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Különböző hullámokat használnak fel, amelyek más sebességgel terjednek és másképp nyelődnek el különböző anyagokban"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Ha egy akadályról 15 ms után jön vissza az ultrahang, akkor az akadály",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "340 m/s * 15 ms / 2 = 2.55 méterre van"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "340 m/s * 15 ms * 2 = 10.2 méterre van"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

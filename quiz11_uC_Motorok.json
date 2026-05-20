@@ -1,0 +1,204 @@
+{
+    "title": "Quiz 12 uC Motorok",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "Eyg brushed motor:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "gyorsabban tud pörögni mint egy brushless motor"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "több elektromágneses zajt hoz létre mint egy brushless motor"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy brushless motor:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "könnyebben hűthető mert a statorban vannak a tekercsek"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "könnyebben lehet meghajtani mert csak egy tápfeszültség kell rá"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy motort azért nem táplálunk a GPIO portról:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "mert a GPIO port nem tud elég nagy áramot biztosítani neki"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "mert a GPIO port nem tud elég nagy feszültséget biztosítani neki"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy elektromágeses relében",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precknision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy tranzisztor kis bázisáramja kapcsolja be és ki a nagy emitter-kollektor áramot"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "egy elektromehcanikus kapcsoló van, egy tekercs kapcsol be és ki egy mechanikus kapcsolót"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A motor vezérlésben a dióda szerepe:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "az hogy levezesse az önindukció által keltett feszültséget amikor a motor kikapcsol"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "az hogy egyenirányítsa az áramot a motor számára"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy PWM jel frekvenciáját úgy választjuk meg, hogy:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "lehetőleg minél nagyobb legyen, az Arduinonál az órajel frekvenciája a lehetséges legnagyobb"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogy figyelembe veszzük a vezérelt eszköz inerciáját"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A lézer fény azért különleges:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "mert nagyon nagy teljesítménye van és emiatt nagy az intenzitása"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "mert monokróm, koherens, és nagyon kevéssé divergens a nyalábja"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "LASER: Light Amplification by ",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Sequential Emission of Radiance"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Stimulated Emission of Radiation"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy szervó motorban a PWM:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a szervó motor szögét állítja be"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "a szervó motor sebességét állítja be"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A PID control esetén:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "az elérni kívánt mennyiséggel arányosan, integráltjával arányosan és deriváltjával arányosan változik a bemenet"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "a hibával arányosan, integráltjával arányosan és deriváltjával arányosan változik a bemenet"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

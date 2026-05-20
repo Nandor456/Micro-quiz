@@ -1,0 +1,281 @@
+{
+    "title": "Quiz 8 uC I2C",
+    "description": "Olvassátok el a kérdéseket és válasszátok ki a megfelelő választ",
+    "questions": [
+        {
+            "type": "question_group",
+            "name": "igaz_hamis",
+            "pick_count": 5,
+            "question_points": 2,
+            "questions": [
+                {
+                    "question_name": "Question",
+                    "question_text": "A TWI vagy I2C kommunikáció",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "szimmetrikus"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "szinkron"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Mitől lesz egy kommunikáció szinkron?",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Egy közös megosztott órajeltől egy erre dedikált hardware vonalon pl. SCL"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "attól hogy nincs egy késés aközött hogy adatokat küldünk és fogadunk"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "I2C kommunikációban a vonalak IDLE állapota:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "SDA és SCL is HIGH"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "SDA HIGH és SCL LOW"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A SETUP és a SAMPLE külön választása azért fontos mert",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precknision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "ugyanazon hardware egység végzi mind a kettőt és nem tudja őket egyszerre végezni"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "mert nem akarjuk hogy a jel változzon amiközben mérjük hogy HIGH vagy LOW"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "I2C protokollban a SETUP és a SAMPLE különválasztása:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "SETUP az SCL rising edgen és SAMPLE az SCL falling edgen van"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "SETUP az SCL==LOW és SAMPLE az SCL==HIGH esetén van"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy START vagy egy STOP jel abban különbözik az adatbittől:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "hogy az IDLE után ez az első elküldött adatbit illetve a csomag végén az utolsó"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "hogy az SDA akkor vált amikor az SCL==HIGH"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy I2C adatcsomagban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "START, 8 bit adat, ACK bit és STOP van"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "START, 5-9 bit adat, opcionális paritás bit és 1-2 STOP bit van"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "az I2C hibaellenőrzése:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "egy paritás bit amit a 8 adatbitből számolnak, lehet even vagy odd"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "egy ACK bit amit a fogadó fél küld el azután hogy megkapott 8 adatbitet"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A TWBR regiszterben be lehet állítani a TWI kommunikáció sebességét",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "Ez tetszőleges sebesség lehet mivel az órajelet megosztja a Master csak 400 kHz alatt legyen"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Ez az előre megadott sebességértékek közül kell legyen: 4800, 9600, 19200,38400, 57600, 115200 stb."
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); kiad egy START jelet",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Ezt az adatcsomag után kötelezően egy STOP kell kövesse"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "ebből ha kivesszük a (1<<TWSTA) részt akkor adatküldést indítunk"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy TWI kommunikációban",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "lézetik PAGE READ és PAGE write ahol több adat is átmehet anélkül hogy mindig címezzük az egységet"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "mindig meg kell ismételni a START és a címzés lépéseket mielőtt adatot küldenénk vagy fogadnánk"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy adott címről való olvasáshoz egy TWI EEPROM memória esetén:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "SLA+R utasítással oldjuk meg, a Master tud írni ebben az esetben is egy belső címet"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "kell egy dummy write (SLA+W) ahol beállítjuk az EEPROM belső címét mielőtt olvasunk róla"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "Egy I2C Slave egység úgy tud szólni a Masternek hogy beindítson egy kommunikációt:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "Hogy a SDA jelet lehúzza miközben az SCL==HIGH marad ez egy START jel"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "nem tud szólni, az I2C protokollban a Slave nem kezdhet kommunikációt"
+                        }
+                    ]
+                },
+                {
+                    "question_name": "Question",
+                    "question_text": "A TWIben a Slave egyetlen dolgot tud kommunikálni a Masternek:",
+                    "question_type": "true_false_question",
+                    "answers": [
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "100",
+                            "answer_text": "azt hogy túl gyors az órajel, ezt clock stretching-el tudja kommunikálni"
+                        },
+                        {
+                            "answer_precision": "10",
+                            "numerical_answer_type": "exact_answer",
+                            "answer_weight": "0",
+                            "answer_text": "azt hogy egy esemény történt és indítsn kommunikációt, erre van a Repeated Start"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}
