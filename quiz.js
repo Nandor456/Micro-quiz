@@ -1,7 +1,7 @@
-// ── quiz.js ──────────────────────────────────────────────────────────────────
+// ── quiz.js ────────────────────────────────────────────────────────────
 // Microcontroller Quiz App for GitHub Pages
-// Loads quiz JSON files from ./quizzes/, randomises questions each session.
-// ─────────────────────────────────────────────────────────────────────────────
+// Loads quiz JSON files from current directory, randomises questions each session.
+// ─────────────────────────────────────────────────────────────────────────
 
 const QUIZZES = [
   { file: 'quiz2_uC.json',        label: 'Quiz 2',  topic: 'Mikrokontroller alapok' },
@@ -17,7 +17,7 @@ const QUIZZES = [
   { file: 'quiz11_uC_Motorok.json',label:'Quiz 11', topic: 'Motorok' },
 ];
 
-// ── State ──────────────────────────────────────────────────────────────────────
+// ── State ────────────────────────────────────────────────────────────────
 let state = {
   questions:    [],   // randomised question list for this session
   current:      0,
@@ -29,7 +29,7 @@ let state = {
   quizTitle:    '',
 };
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -67,7 +67,7 @@ function buildQuestions(data) {
   return shuffle(result);
 }
 
-// ── DOM refs ──────────────────────────────────────────────────────────────────
+// ── DOM refs ──────────────────────────────────────────────────────────────
 const $ = id => document.getElementById(id);
 
 const screens = {
@@ -93,7 +93,7 @@ function showScreen(name) {
   }
 }
 
-// ── Home screen ───────────────────────────────────────────────────────────────
+// ── Home screen ───────────────────────────────────────────────────────────
 function renderHome() {
   showScreen('home');
   const grid = $('quiz-grid');
@@ -105,18 +105,18 @@ function renderHome() {
     card.innerHTML = `
       <div class="card-num">${q.label}</div>
       <div class="card-title">${q.topic}</div>
-      <div class="card-meta">quizzes/${q.file}</div>
+      <div class="card-meta">${q.file}</div>
     `;
     card.addEventListener('click', () => startQuiz(q));
     grid.appendChild(card);
   });
 }
 
-// ── Load & start quiz ──────────────────────────────────────────────────────────
+// ── Load & start quiz ─────────────────────────────────────────────────────
 async function startQuiz(quizMeta) {
   showScreen('loading');
   try {
-    const resp = await fetch(`quizzes/${quizMeta.file}`);
+    const resp = await fetch(quizMeta.file);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
 
@@ -136,7 +136,7 @@ async function startQuiz(quizMeta) {
   }
 }
 
-// ── Quiz screen ───────────────────────────────────────────────────────────────
+// ── Quiz screen ───────────────────────────────────────────────────────────
 function renderQuiz() {
   showScreen('quiz');
   $('quiz-label').textContent = state.quizTitle;
@@ -243,7 +243,7 @@ $('btn-back').addEventListener('click', () => {
   if (confirm('Biztosan megszakítod a kvízt?')) renderHome();
 });
 
-// ── Result screen ─────────────────────────────────────────────────────────────
+// ── Result screen ─────────────────────────────────────────────────────────
 function renderResult() {
   showScreen('result');
 
@@ -299,5 +299,6 @@ $('btn-retry').addEventListener('click', () => {
 
 $('btn-home-from-result').addEventListener('click', renderHome);
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+// ── Init ────────────────────────────────────────────────────────────────
 renderHome();
+
